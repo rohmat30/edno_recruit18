@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost/ednov/",
+            "url": "http://localhost/edno_recruit18",
             "webRoot": "${workspaceFolder}"
         }
     ]
