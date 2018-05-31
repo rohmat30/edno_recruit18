@@ -1,0 +1,102 @@
+body {
+  background: #f7f7f7;
+}
+
+.navbar-default {
+  background: #FFFFFF;
+}
+.navbar-default .navbar-toggle {
+  border: 0;
+}
+
+.jumbotron-primary {
+  background: #2196F3;
+  color: #FFFFFF;
+}
+
+.m-2 {
+  margin-top: -20px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.thumbnail {
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 6px 0 rgba(51, 51, 51, 0.5);
+  padding: 0;
+  overflow: hidden;
+}
+.thumbnail img {
+  transform: scale(1) rotate(0deg);
+  transition: .35s ease all;
+}
+.thumbnail:hover {
+  background: #2196F3;
+}
+.thumbnail:hover .caption {
+  bottom: 0;
+  transition: .35s ease bottom;
+}
+.thumbnail:hover img {
+  transform: scale(1.5) rotate(15deg);
+  transition: .35s ease transform;
+}
+.thumbnail .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background: rgba(255, 255, 255, 0.8);
+  transition: .35s ease bottom;
+}
+.thumbnail .caption h1, .thumbnail .caption h2, .thumbnail .caption h3, .thumbnail .caption h4, .thumbnail .caption h5, .thumbnail .caption h6 {
+  margin-top: 0;
+}
+
+.xcap {
+  color: #FFFFFF;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 10;
+  right: -10px;
+  top: 10px;
+  display: block;
+  height: 30px;
+}
+.xcap:after {
+  position: absolute;
+  content: "";
+  border: 7.5px solid transparent;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  top: 100%;
+  right: 0;
+}
+.xcap.xcap-success {
+  background: #4CAF50;
+}
+.xcap.xcap-success:after {
+  border-top-color: #388E3C;
+  border-left-color: #388E3C;
+}
+.xcap.xcap-danger {
+  background: #F44336;
+}
+.xcap.xcap-danger:after {
+  border-top-color: #D32F2F;
+  border-left-color: #D32F2F;
+}
+.xcap.xcap-primary {
+  background: #2196F3;
+}
+.xcap.xcap-primary:after {
+  border-top-color: #1976D2;
+  border-left-color: #1976D2;
+}

@@ -1,0 +1,101 @@
+body {
+    background: $white - #080808;
+}
+.navbar-default {
+    background: $white;
+    .navbar-toggle {
+        border: 0;
+    }
+}
+.jumbotron {
+    &-primary {
+        background: $blue;
+        color: $white;
+    }
+}
+.m-2 {
+    margin-top: -20px;
+}
+.btn-outline {
+    background: transparent;
+    color: $white;
+}
+.thumbnail {
+    margin-left: -10px;
+    margin-right: -10px;
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 6px 0 rgba($black,.5);
+    padding: 0;
+    overflow: hidden;
+    img {
+        transform: scale(1)  rotate(0deg);
+        transition: .35s ease all;
+    }
+    &:hover {
+        background: $blue;
+        .caption {
+            bottom: 0;
+            transition: .35s ease bottom;
+        }
+        img {
+            transform: scale(1.5) rotate(15deg);
+            transition: .35s ease transform;
+        }
+    }
+    .caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -100%;
+        // color: $white;
+        background: rgba($white, .8);
+        transition: .35s ease bottom;
+        h1,h2,h3,h4,h5,h6 {
+            margin-top: 0;
+        }
+    }
+}
+
+.xcap {
+    color: $white;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 10;
+    right: -10px;
+    top: 10px;
+    display: block;
+    height: 30px;
+    &:after {
+        position: absolute;
+        content: "";
+        border: 7.5px solid transparent;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        top: 100%;
+        right: 0;
+    }
+    &.xcap-success {
+        background: $green;
+        &:after {
+            border-top-color: $greenDark;
+            border-left-color: $greenDark;
+        }
+    }
+    &.xcap-danger {
+        background: $red;
+        &:after {
+            border-top-color: $redDark;
+            border-left-color: $redDark;
+        }
+    }
+    
+    &.xcap-primary {
+        background: $blue;
+        &:after {
+            border-top-color: $blueDark;
+            border-left-color: $blueDark;
+        }
+    }
+}
