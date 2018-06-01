@@ -1,101 +1,159 @@
 body {
-    background: $white - #080808;
+    background: $white - #111;
 }
-.navbar-default {
-    background: $white;
-    .navbar-toggle {
-        border: 0;
+a {
+    transition: .35s all ease;
+    &:hover,&:focus {
+        text-decoration: none;
+        transition: .35s all ease;
     }
 }
-.jumbotron {
-    &-primary {
-        background: $blue;
-        color: $white;
-    }
-}
-.m-2 {
-    margin-top: -20px;
-}
-.btn-outline {
-    background: transparent;
-    color: $white;
-}
-.thumbnail {
-    margin-left: -10px;
-    margin-right: -10px;
+.navbar-ednov {
     position: relative;
-    border: 0;
+    background: $white;
+    border: none;
+    border-bottom: 1px solid $white - #222;
     border-radius: 0;
-    box-shadow: 0 2px 6px 0 rgba($black,.5);
-    padding: 0;
-    overflow: hidden;
-    img {
-        transform: scale(1)  rotate(0deg);
-        transition: .35s ease all;
-    }
-    &:hover {
-        background: $blue;
-        .caption {
-            bottom: 0;
-            transition: .35s ease bottom;
-        }
-        img {
-            transform: scale(1.5) rotate(15deg);
-            transition: .35s ease transform;
-        }
-    }
-    .caption {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -100%;
-        // color: $white;
-        background: rgba($white, .8);
-        transition: .35s ease bottom;
-        h1,h2,h3,h4,h5,h6 {
+    box-shadow: 0 1px 6px 0 rgba($black,.2);
+    .navbar-brand {
+        margin-top: -12px;
+        @media (min-width: 768px) {
             margin-top: 0;
         }
     }
+    .navbar-header {
+        width: 100%;
+        .fa {
+            font-size: 20px;
+        }
+        .navbar-login,.navbar-list {
+            margin-right: 0;
+            display: block;
+            position: relative;
+            .count {
+                position: absolute;
+                top: -3px;
+                left: 20px;
+                background: $red;
+                padding: 1px 5px;
+                color: $white;
+                border-radius: 50%;
+                font-size: 10px;
+            }
+        }
+        @media (min-width: 768px) {
+            padding-bottom: 42px;
+            .navbar-login,.navbar-list {
+                top: 10px;
+            }
+            .navbar-login {
+                margin-left: 5px;
+                border: 1px solid $white - #222;
+                &:hover {
+                    border: 1px solid $red;
+                    background: $red;
+                    color: $white;
+                }
+            }
+        }
+    }
+    a.navbar-toggle,.navbar-toggle {
+        border-radius: 0;
+        border: none;
+        padding: 5px 10px;
+        margin-right: 7.5px;
+        color: $black + #222;
+        &:hover,&:focus {
+            color: $red;
+            background: transparent;
+        }
+    }
+    .navbar-collapse {
+        border-color: $white - #222;
+        .navbar-nav {
+            > li {
+                &.open > a {
+                    color: $red;
+                    background: transparent;
+                    @media (min-width: 768px) {
+                        background: rgba($redLight,.2);
+                        color: $white;
+                        &:after {
+                            display: block;
+                            height: 3px;
+                            content: "";
+                            position: absolute;
+                            background: $white;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+                > a {
+                    color: $black + #222;
+                    &:hover,&:focus {
+                        color: $red;
+                        background: transparent;
+                    }
+                    @media (min-width: 768px) {
+                        color: $white;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        &:after {
+                            display: block;
+                            height: 3px;
+                            content: "";
+                            position: absolute;
+                            background: $white;
+                            left: 50%;
+                            right: 50%;
+                            bottom: 0;
+                            transition: .35s ease all;
+                        }
+                        &:hover,&:focus {
+                            background: rgba($redLight,.2);
+                            color: $white;
+                            &:after {
+                                left: 0;
+                                right: 0;
+                                transition: .35s ease all;
+                            }
+                        }
+                    }
+                    &.active {
+                        background: rgba($redLight,.2);
+                        &:after {
+                            display: block;
+                            height: 3px;
+                            content: "";
+                            position: absolute;
+                            background: $white;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            position: absolute;
+            bottom: -36px;
+            background: $red;
+            right: 15px;
+            left: 15px;
+            padding-left: 0;
+        }
+    }
 }
-
-.xcap {
-    color: $white;
-    padding: 5px 15px;
-    position: absolute;
-    z-index: 10;
-    right: -10px;
-    top: 10px;
-    display: block;
-    height: 30px;
-    &:after {
-        position: absolute;
-        content: "";
-        border: 7.5px solid transparent;
-        border-top-width: 3px;
-        border-bottom-width: 3px;
-        top: 100%;
-        right: 0;
-    }
-    &.xcap-success {
-        background: $green;
-        &:after {
-            border-top-color: $greenDark;
-            border-left-color: $greenDark;
-        }
-    }
-    &.xcap-danger {
-        background: $red;
-        &:after {
-            border-top-color: $redDark;
-            border-left-color: $redDark;
-        }
-    }
-    
-    &.xcap-primary {
-        background: $blue;
-        &:after {
-            border-top-color: $blueDark;
-            border-left-color: $blueDark;
-        }
+.fa-25px {
+    font-size: 24px;
+}
+.nopadding-xs {
+    padding: 0;
+    @media (min-width: 768px) {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }

@@ -1,0 +1,16 @@
+@mixin colorBtn($color,$colorHover) {
+    background: $color;
+    border-color: $color;
+    &:hover {
+        background: $colorHover;
+        border-color: $colorHover;
+    }
+} 
+@mixin colorBtnOutline($color,$colorHover) {
+    background: transparent;
+    border-color: $color;
+    &:hover {
+        background: $colorHover;
+        border-color: $colorHover;
+    }
+} 

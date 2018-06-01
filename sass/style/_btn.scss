@@ -1,0 +1,38 @@
+
+.btn {
+    border-radius: 0;
+    &.btn-primary {
+        @include colorBtn($blue, $blueDark);
+    }
+    &.btn-default {
+        @include colorBtn($white, $white - #111);
+    }
+    &.btn-info {
+        @include colorBtn($cyan, $cyanDark);
+    }
+    &.btn-warning {
+        @include colorBtn($amber, $amberDark);
+    }
+    &.btn-danger {
+        @include colorBtn($red, $redDark);
+    }
+    &-outline {
+        background: transparent;
+        color: $white;
+        &.btn-primary {
+            @include colorBtnOutline($blue, $blueDark);
+        }
+        &.btn-default {
+            @include colorBtnOutline($white, $white - #111);
+        }
+        &.btn-info {
+            @include colorBtnOutline($cyan, $cyanDark);
+        }
+        &.btn-warning {
+            @include colorBtnOutline($amber, $amberDark);
+        }
+        &.btn-danger {
+            @include colorBtnOutline($red, $redDark);
+        }
+    }
+}
