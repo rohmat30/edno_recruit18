@@ -1,0 +1,63 @@
+
+.page-header {
+    background: $white;
+    border-bottom: 1px solid $white - #333;
+    position: relative;
+    height: 42px;
+    margin-top: 20px;
+    .btn-link {
+        color: $black;
+        i.fa {
+            margin-right: 5px;
+            margin-left: 0;
+        }
+        &:hover {
+            color: $red;
+            text-decoration: none;
+            i.fa {
+                margin-left: 5px;
+                margin-right: 0;
+            }
+        }
+    }
+    .page-title {
+        text-transform: uppercase;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        margin: 0;
+        padding: 20px;
+        background: $black + #222;
+        bottom: 0;
+        color: $white;
+        font-weight: normal;
+        &:after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-color: transparent;
+            border-width: 10px 5px;
+            border-bottom-color: $black;
+            border-left-color: $black;
+            right: -10px;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    .owl-control-nav {
+        float: right;
+        font-size: 0;
+        .control {
+            font-size: 20px;
+            background: $black + #222;
+            border: 0;
+            color: $white;
+            margin: 0;
+            padding: 7px 10px;
+            outline: none;
+            &:hover {
+                background: $red;
+            }
+        }
+    }
+}

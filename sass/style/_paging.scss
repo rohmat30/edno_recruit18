@@ -1,0 +1,77 @@
+
+.pagination {
+    li {
+        &:first-child,&:last-child {
+            a {
+                background: $black * 2.25;
+                border-color: $black * 2.25;
+            }
+        }
+        a {
+            border-radius: 0 !important;
+            background: $black;
+            border-color: $black;
+            color: $white;
+            &:hover,&:focus {
+                background: $red;
+                color: $white;
+                border-color: $red;
+            }
+        }
+        &.disabled {
+            a {
+                background: $black;
+                color: $white;
+                border-color: $black;
+                &:hover,&:focus {
+                    background: $red;
+                    color: $white;
+                    border-color: $red;
+                }
+            }
+        }
+        &.active {
+            a,a:hover,a:focus {
+                background: $red;
+                color: $white;
+                border-color: $red;
+            }
+        }
+    }
+}
+.breadcrumb {
+    background: $white;
+    border-radius: 0;
+    @media (min-width: 768px) {
+        margin-top: 30px;
+    }
+    li {
+        a {
+            color: $black;
+            &:hover,&:focus {
+                color: $red;
+            }
+        }
+    }
+}
+
+.wrap-breadcrumb {
+    background: url("./img/breadcrumb.jpg") scroll repeat;
+    background-size: 100% 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    .breadcrumb {
+        text-align: center;
+        background: transparent;
+        border: 0;
+        padding-top: 25px;
+        > li + li:before {
+            font-family: 'FontAwesome';
+            color: $black;
+            content: "\f101";
+        }
+    }
+}

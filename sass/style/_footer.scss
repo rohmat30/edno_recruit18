@@ -1,0 +1,46 @@
+.footer {
+    background: $black;
+    color: $white;
+    .list-group {
+        background: transparent;
+        &-item {
+            background: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            border: 0;
+        }
+    }
+    .bottom-content {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .end-info {
+        background: $black - #111;
+        padding: 15px;
+    }
+    .block {
+        &-heading {
+            .block-title {
+                text-transform: uppercase;
+            }
+        }
+        &-body {
+            color: $white - $black;
+        }
+        &-list {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                a {
+                    color: $white - $black;
+                    padding: 3px 0;
+                    display: block;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}

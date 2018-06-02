@@ -99,4 +99,13 @@ $(document).ready(function(){
             scrollTop: $(_target).offset().top,
         }, 1000);
     });
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('./js/service-worker.js')
+            .then(function() { console.log('Service Worker Registered');
+        });
+    } else {
+        console.log('tidaj');
+    }
 });

@@ -1,0 +1,266 @@
+.product-nav {
+    position: relative;
+    margin-bottom: 15px;
+    &-content {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 3px;
+            margin-left: 0;
+            a {
+                background: $white;
+                display: block;
+                padding: 7.5px 15px;
+                &:hover,&:focus {
+                    background: $red;
+                    color: $white;
+                }
+            }
+            &.active {
+                a {
+                    background: $red;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+.product {
+    position: relative;
+    background: $white;
+    border-bottom: 1px solid $white - #333;
+    margin-bottom: 20px;
+    &:hover {
+        box-shadow: 0 1px 6px 0 rgba($black,.35);
+    }
+    .thumbnail {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        border-bottom: 1px solid $white - #111;
+        .info {
+            position: absolute;
+            display: block;
+            transition: .35s bottom ease;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            @media (min-width: 768px) {
+                bottom: -100%;
+            }
+            a {
+                background: $red;
+                color: $white;
+                padding: 5px 10px;
+                display: inline-block;
+                &:hover {
+                    background: $black;
+                }
+            }
+        }
+        img {
+            transform: scale(1);
+            transition: .35s ease transform;
+            width: auto;
+        }
+    }
+    &:hover {
+        .thumbnail img {
+            transform: scale(1.2);
+            transition: .35s ease transform;
+        }
+        .info {
+            bottom: 0;
+            transition: .35s bottom ease;
+        }
+    }
+    .caption {
+        padding: 15px;
+        text-align: center;
+        .product-name {
+            a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: $black * 3;
+                text-transform: uppercase;
+                display: block;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+        .product-price {
+            .price {
+                font-size: 18px;
+                color: $black;
+                display: inline-block;
+            }
+            .oldprice {
+                color: $black * 3;
+                text-decoration: line-through;
+                display: inline-block;
+            }
+        }
+    }
+}
+.content {
+    position: relative;
+    background: $white;
+    border-bottom: 1px solid $white - #333;
+    margin-bottom: 20px;
+}
+
+.product-cat {
+    border-radius: 0;
+    border: 0;
+    .panel-heading {
+        background: $red;
+        color: $white;
+        border-radius: 0;
+        .panel-title {
+            text-transform: uppercase;
+        }
+    }
+    .active {
+        background: transparent;
+        border-bottom-color: $white - #222;
+        &:hover {
+            background: transparent;
+            border-bottom-color: $white - #222;
+        }
+        a {
+            color: $red;
+        }
+    }
+}
+
+.product-single {
+    position: relative;
+    .product-info {
+        background: $white;
+        border-bottom: 1px solid $white - #333;
+        margin-bottom: 20px;
+        padding: 15px;
+        .thumbnail {
+            border: 0;
+            background: $red;
+            border-radius: 0;
+            padding: 0;
+        }
+        .product-title {
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+            margin: 15px 0 0;
+        }
+        .product-wrap {
+            border-bottom: 1px solid $white - $black;
+            ul {
+                margin: 7.5px 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    margin-right: 5px;
+                    a {
+                        display: block;
+                        color: $black * 2;
+                        &:hover, &:focus {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+        .short-desc {
+            margin: 10px 0;
+            padding: 0;
+            li {
+                list-style: none;
+                padding: 3px 0;
+            }
+            .product-price {
+                .price {
+                    font-size: 24px;
+                    color: $black;
+                    display: inline-block;
+                    font-weight: bold;
+                }
+                .oldprice {
+                    vertical-align: super;
+                    color: $black * 3;
+                    text-decoration: line-through;
+                    display: inline-block;
+                }
+            }
+        }
+        .product-option {
+            max-width: 240px;
+            .num {
+                text-align: center;
+                &::-webkit-outer-spin-button,&::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+            .input-group {
+                &-addon {
+                    background: transparent;
+                    padding-left: 0;
+                    border-color: transparent;
+                }
+                &-btn {
+                    .btn {
+                        border-color: $white - $black;
+                        margin-right: -2px;
+                        margin-left: -1px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                .add-cart {
+                    .btn {
+                        margin-left: 5px;
+                        border-color: $red;
+                    }
+                }
+            }
+        }
+    }
+    .product-tab {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        .nav-tabs {
+            border: 0;
+            li {
+                a {
+                    border: 0;
+                    margin: 0;
+                    border-radius: 0;
+                    background: $black * 3.5;
+                    color: $white;
+                }
+                &.active {
+                    a {
+                        background: $white;
+                        color: $black;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            background: $white;
+            padding: 20px;
+            border-bottom: 1px solid $white - $black;
+        }
+    }
+}
