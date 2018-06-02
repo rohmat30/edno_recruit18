@@ -176,6 +176,10 @@ a:hover, a:focus {
 .btn {
   border-radius: 0;
 }
+.btn:focus, .btn:active, .btn.active {
+  outline: none;
+  box-shadow: none;
+}
 .btn.btn-primary {
   background: #2196F3;
   border-color: #2196F3;
@@ -215,6 +219,13 @@ a:hover, a:focus {
 .btn.btn-danger:hover {
   background: #D32F2F;
   border-color: #D32F2F;
+}
+.btn.btn-link {
+  color: #333;
+}
+.btn.btn-link:hover, .btn.btn-link:focus {
+  color: #F44336;
+  text-decoration: none;
 }
 .btn-outline {
   background: transparent;
@@ -632,8 +643,10 @@ a:hover, a:focus {
   text-decoration: line-through;
   display: inline-block;
 }
-.product-single .product-info .product-option {
-  max-width: 240px;
+@media (min-width: 384px) {
+  .product-single .product-info .product-option {
+    max-width: 240px;
+  }
 }
 .product-single .product-info .product-option .num {
   text-align: center;
@@ -646,6 +659,9 @@ a:hover, a:focus {
   background: transparent;
   padding-left: 0;
   border-color: transparent;
+}
+.product-single .product-info .product-option .input-group input {
+  padding: 5px;
 }
 .product-single .product-info .product-option .input-group-btn .btn {
   border-color: #cccccc;

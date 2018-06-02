@@ -203,7 +203,9 @@
             }
         }
         .product-option {
-            max-width: 240px;
+            @media (min-width: 384px) {
+                max-width: 240px;
+            }
             .num {
                 text-align: center;
                 &::-webkit-outer-spin-button,&::-webkit-inner-spin-button {
@@ -216,6 +218,9 @@
                     background: transparent;
                     padding-left: 0;
                     border-color: transparent;
+                }
+                input {
+                    padding: 5px;
                 }
                 &-btn {
                     .btn {

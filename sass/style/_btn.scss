@@ -1,6 +1,10 @@
 
 .btn {
     border-radius: 0;
+    &:focus,&:active,&.active {
+        outline: none;
+        box-shadow: none;
+    }
     &.btn-primary {
         @include colorBtn($blue, $blueDark);
     }
@@ -15,6 +19,13 @@
     }
     &.btn-danger {
         @include colorBtn($red, $redDark);
+    }
+    &.btn-link {
+        color: $black;
+        &:hover,&:focus {
+            color: $red;
+            text-decoration: none;
+        }
     }
     &-outline {
         background: transparent;
