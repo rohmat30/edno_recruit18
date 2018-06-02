@@ -3,9 +3,11 @@ body {
 }
 a {
     transition: .35s all ease;
+    color: $black;
     &:hover,&:focus {
         text-decoration: none;
         transition: .35s all ease;
+        color: $red;
     }
 }
 .navbar-ednov {
@@ -15,6 +17,7 @@ a {
     border-bottom: 1px solid $white - #222;
     border-radius: 0;
     box-shadow: 0 1px 6px 0 rgba($black,.2);
+    margin-bottom: 0;
     .navbar-brand {
         margin-top: -12px;
         @media (min-width: 768px) {
